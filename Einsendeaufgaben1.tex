@@ -1,0 +1,99 @@
+\documentclass[a4paper,11pt]{article}
+
+\usepackage[ansinew]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[ngerman]{babel}
+\usepackage[automark]{scrpage2}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+
+\usepackage[
+  hypertexnames=false,
+  pdftitle={Einsendeaufgaben Kurseinheit 1},
+  pdfauthor={Torben Flickinger},
+  bookmarksopen,
+  colorlinks,
+  linkcolor=blue,
+  urlcolor=black%
+]{hyperref}
+\pagestyle{scrheadings}
+\ihead{Einsendeaufgaben Kurseinheit 1}
+\ohead{Torben Flickinger, Matrikelnr. 8278490 }
+\cfoot{\pagemark}
+\begin{document}
+%Ab hier kommt ihr Text%
+
+
+ \section*{Aufgabe 1.3}
+ 
+ \begin{enumerate}
+ \item
+ Es gilt $n^2 > n + 1$ für alle $n\ge2.$\\
+ Induktionsanfang: Sei $n_0=2$. Dann gilt $2^2>2+1\Rightarrow4>3$\\\\
+ Induktionsannahme: Für ein $n\ge2$ gilt $n^2>n+1$\\\\
+ Induktionsschritt: Zu zeigen ist
+ \[
+ 	n^2>n+1\Rightarrow(n+1)^2>(n+1)+1=n+2
+ \]
+ Es gilt
+ \begin{eqnarray*}
+ 	(n+1)^2&=&n^2+2n+1>n+1+2n+1\\
+ 	&\ge&(n+1)+5\text{, denn }n\ge2\\
+ 	&>&n+2.
+ \end{eqnarray*}
+ Mit dem Prinzip der vollständigen Induktion folgt, dass $n^2>n+1$ für alle $n\in\mathbb{N},n\ge2$ gilt.
+\item
+Es gilt $n^2 \ge 2n + 3$ für alle $n\ge3.$\\
+ Induktionsanfang: Sei $n_0=3$. Dann gilt $3^2\ge6+3\Rightarrow9>9$\\\\
+ Induktionsannahme: Für ein $n\ge3$ gilt $n^2\ge2n+3$\\\\
+ Induktionsschritt: Zu zeigen ist
+ \[
+ 	n^2\ge2n+3\Rightarrow(n+1)^2\ge2(n+1)+3=2n+5
+ \]
+ Es gilt
+ \begin{eqnarray*}
+ 	(n+1)^2&=&n^2+2n+1\ge2n+3+2n+1\\
+ 	&\ge&2n +3+7\text{, denn }n\ge3\\
+ 	&>&2n+5.
+ \end{eqnarray*}
+ Mit dem Prinzip der vollständigen Induktion folgt, dass $n^2>2n+3$ für alle $n\in\mathbb{N},n\ge3$ gilt.
+ \end{enumerate}
+\section*{Aufgabe 1.4}
+\begin{enumerate}
+\item
+zum Beispiel:
+
+$X=\begin{pmatrix} -2 & - 4 &-6\\1 & 2 & 3\end{pmatrix}$
+
+\item
+
+$AB=\begin{pmatrix} -1 & -8 & -10 \\ 1 & -2 & -5 \\ 9 & 22 & 15\end{pmatrix}$\\
+$BA=\begin{pmatrix} 15 & -21  \\ 10 & -3 \end{pmatrix}$
+
+
+
+\end{enumerate}
+
+\section*{Aufgabe 1.5}
+\begin{enumerate}
+\item
+Sei $f$ definiert durch $f(n)=1$ für alle $n\in\mathbb{N}$, wenn $n$ ungerade, und $f(n)=\frac{n}{2}$ für alle $n\in\mathbb{N}$, wenn $n$ gerade. Dann ist $f$ surjektiv, da ganz $\mathbb{N}$ in der Bildmenge enthalten ist, und 1 wird unendlich oft getroffen, da alle ungeraden Zahlen auf 1 abgebildet werden.
+\item
+Sei $f:\mathbb{N}\rightarrow\mathbb{N}$ definiert durch $f(n)=2n$. Dann ist $f$ injektiv, da jedes Element Bild von f nur von einem Element des Urbildes getroffen wird. Und die unendlich vielen ungeraden Zahlen sind nicht im Bild von $f$.
+	
+
+\end{enumerate}
+
+\section*{Aufgabe 1.6}
+Sei $A\in M_{mn}(\mathbb{K})$ eine Matrix, sodass $X A = 0\in M_{mn}(\mathbb{K})$ für alle Matrizen $X\in M_{mm}(\mathbb{K})$. Dann gilt insbesondere: $E_{ii}A = \begin{pmatrix}
+0 & \cdots & 0 \\
+0 & \cdots & 0 \\
+\end{pmatrix}
+$
+
+%Dies letzte Zeile muss unbedingt erhalten bleiben%
+%Hiernach also nicht mehr ändern%
+\end{document}

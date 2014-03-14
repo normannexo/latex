@@ -1,0 +1,248 @@
+\documentclass[a4paper,11pt]{article}
+
+\usepackage[ansinew]{inputenc}
+\usepackage[left=1.5cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[ngerman]{babel}
+\usepackage[automark]{scrpage2}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+
+\usepackage[
+  hypertexnames=false,
+  pdftitle={Einsendeaufgaben Kurseinheit 1},
+  pdfauthor={Torben Flickinger},
+  bookmarksopen,
+  colorlinks,
+  linkcolor=blue,
+  urlcolor=black%
+]{hyperref}
+
+\pagestyle{scrheadings}
+\renewcommand*{\headfont}{\normalfont\bfseries}
+\ihead{Einsendeaufgaben Kurseinheit 1 WS\\Torben Flickinger, Matrikelnr. 8278490 }
+\ohead{}
+\cfoot{\pagemark}
+\begin{document}
+%Ab hier kommt ihr Text%
+\section*{Aufgabe 1.2}
+\begin{enumerate}
+\item
+Für $ \mathcal{A}\implies (\mathcal{B}\wedge \mathcal{C})$ gilt folgender Wahrheitstafel:
+\begin{center}
+    \begin{tabular}{c | c | c | c || c}
+   
+    $\mathcal{A}$ & $\mathcal{B}$ & $\mathcal{C}$ & $(\mathcal{B}\wedge \mathcal{C})$ & $ \mathcal{A}\implies (\mathcal{B}\wedge \mathcal{C})$\\ \hline\hline
+   	w & w & w & w & w \\
+   	w & w & f & f & f \\
+   	w & f & w & f & f \\
+   	w & f & f & f & f \\
+   	f & w & w & w & w \\
+   	f & w & f & f & w \\
+   	f & f & w & f & w \\
+   	f & f & f & f & w \\
+   	
+    \end{tabular}
+\end{center}
+
+Für $( \mathcal{A}\implies \mathcal{B})\wedge (\mathcal{A}\implies \mathcal{C})$ gilt folgende Wahrheitstafel:
+\begin{center}
+    \begin{tabular}{c | c | c | c | c || c}
+   
+    $\mathcal{A}$ & $\mathcal{B}$ & $\mathcal{C}$ & $(\mathcal{A}\implies \mathcal{B})$ & $(\mathcal{A}\implies\mathcal{C})$ & $( \mathcal{A}\implies \mathcal{B})\wedge (\mathcal{A}\implies \mathcal{C})$\\ \hline\hline
+   	w & w & w & w & w & w \\
+   	w & w & f & w & f & f\\
+   	w & f & w & f & w & f\\
+   	w & f & f & f & f & f\\
+   	f & w & w & w & w & w\\
+   	f & w & f & w & w & w\\
+   	f & f & w & w & w & w\\
+   	f & f & f & w & w & w\\
+   	
+    \end{tabular}
+\end{center}
+Die letzte Spalte ist in beiden Wahrheitstafeln identisch, also sind die beiden Aussagen logisch äquivalent.
+
+\item
+Für $ \mathcal{A}\implies (\mathcal{B}\vee \mathcal{C})$ gilt folgende Wahrheitstafel:
+\begin{center}
+    \begin{tabular}{c | c | c | c || c}
+   
+    $\mathcal{A}$ & $\mathcal{B}$ & $\mathcal{C}$ & $(\mathcal{B}\vee \mathcal{C})$ & $ \mathcal{A}\implies (\mathcal{B}\vee \mathcal{C})$\\ \hline\hline
+   	w & w & w & w & w \\
+   	w & w & f & w & w \\
+   	w & f & w & w & w \\
+   	w & f & f & f & f \\
+   	f & w & w & w & w \\
+   	f & w & f & w & w \\
+   	f & f & w & w & w \\
+   	f & f & f & f & w \\
+   	
+    \end{tabular}
+\end{center}
+
+Für $( \mathcal{A}\implies \mathcal{B})\vee(\mathcal{A}\implies \mathcal{C})$ gilt folgende Wahrheitstafel:
+\begin{center}
+    \begin{tabular}{c | c | c | c | c || c}
+   
+    $\mathcal{A}$ & $\mathcal{B}$ & $\mathcal{C}$ & $(\mathcal{A}\implies \mathcal{B})$ & $(\mathcal{A}\implies\mathcal{C})$ & $( \mathcal{A}\implies \mathcal{B})\vee (\mathcal{A}\implies \mathcal{C})$\\ \hline\hline
+   	w & w & w & w & w & w \\
+   	w & w & f & w & f & w\\
+   	w & f & w & f & w & w\\
+   	w & f & f & f & f & f\\
+   	f & w & w & w & w & w\\
+   	f & w & f & w & w & w\\
+   	f & f & w & w & w & w\\
+   	f & f & f & w & w & w\\
+   	
+    \end{tabular}
+\end{center}
+Die letzte Spalte ist in beiden Wahrheitstafeln identisch, also sind die beiden Aussagen logisch äquivalent.
+
+\end{enumerate}
+\section*{Aufgabe 1.3}
+Es fällt auf, dass $SA$ aus $A$ dadurch entsteht, dass nacheinander folgende elementare Zeilenumformungen an $A$ vorgenommen werden.
+\begin{enumerate}
+
+	\item von Zeile 1 wird das 3-fache von Zeile 3 abgezogen
+	\item von Zeile 2 wird das 8-fache von Zeile 3 abgezogen
+	\item Zeile 1 und Zeile 2 werden vertauscht
+
+	
+\end{enumerate}
+Man erhält die gesuchte Matrix $S$, indem man die Elementarmatrizen, die diese Transformationen bewerkstelligen, miteinander multipliziert:\\
+\begin{eqnarray*}
+S&=&P_{12}T_{23}(-8)T_{13}(-3)\\
+&=&\begin{pmatrix} 0 & 1 & 0 \\ 1 & 0 & 0 \\ 0 & 0 & 1\end{pmatrix}
+\begin{pmatrix} 1 & 0 & 0 \\ 0 & 1 & -8 \\ 0 & 0 & 1\end{pmatrix}
+\begin{pmatrix} 1 & 0 & -3 \\ 0 & 1 & 0 \\ 0 & 0 & 1\end{pmatrix}\\
+&=&\begin{pmatrix} 0 & 1 & 0 \\ 1 & 0 & 0 \\ 0 & 0 & 1\end{pmatrix}
+\begin{pmatrix} 1 & 0 & -3 \\ 0 & 1 & -8 \\ 0 & 0 & 1\end{pmatrix}\\
+&=&\begin{pmatrix} 0 & 1 & -8 \\ 1 & 0 & -3 \\ 0 & 0 & 1\end{pmatrix}
+\end{eqnarray*}
+Mit $S=\begin{pmatrix} 0 & 1 & -8 \\ 1 & 0 & -3 \\ 0 & 0 & 1\end{pmatrix}$ ist $SA=\begin{pmatrix}6&7&0&9&10\\1&2&0&4&5\\0&0&1&0&0\end{pmatrix}$
+\section*{Aufgabe 1.4}
+\begin{enumerate}
+\item
+Sei $x\in\mathbb{K}$, dann gilt 
+$
+\begin{pmatrix}x & 0 \\0 & 0\end{pmatrix} \in M_{22}(\mathbb{K})
+$\\
+und es ist $f(\begin{pmatrix}x & 0 \\0 & 0\end{pmatrix})=x + 0 =x$
+Jedes $x\in\mathbb{K}$ besitzt also ein Urbild unter $f$, also ist $f$ surjektiv.
+\item
+Sei $x\in\mathbb{K}$.Es sind
+$
+A = \begin{pmatrix}x & 0 \\0 & 0\end{pmatrix} 
+$
+und
+$
+B = \begin{pmatrix}0 & 0 \\0 & x\end{pmatrix} 
+$
+verschiedene Elemente in $M_{22}(\mathbb{K})$\\
+Es gilt $f(A)=f(B)=x$\\
+Es folgt, dass $f$ nicht injektiv ist.
+\item
+Sei $A=\begin{pmatrix}a & b \\c & d\end{pmatrix}$ und
+$B=\begin{pmatrix}a' & b' \\c' & d'\end{pmatrix}$\\
+Dann gilt:
+\[
+f(AB)=f(\begin{pmatrix}a\cdot a' + b \cdot c' & a \cdot b' + b \cdot d' \\c \cdot a' + d \cdot c'  & c \cdot b' + d \cdot d' \end{pmatrix})\\
+= (a \cdot a' + b \cdot c') + (c \cdot b' + d \cdot d') \ne (a+d)\cdot (a' + d') = f(A)\cdot f(B)
+\]
+Die Behauptung 3. ist also falsch.
+\item
+Sei $A=\begin{pmatrix}a & b \\c & d\end{pmatrix}$ und
+$B=\begin{pmatrix}a' & b' \\c' & d'\end{pmatrix}$\\
+Dann gilt:
+\[
+f(A+B)=f(\begin{pmatrix} a + a' & b + b' \\ c + c' & d + d'  \end{pmatrix})\\
+= (a + a' + d + d') = (a + d) + (a'+d') = f(A)+ f(B)
+\]
+Behauptung 4. ist also richtig.
+\item
+Sei $A=\begin{pmatrix} r & s \\t & u\end{pmatrix}$
+
+Dann gilt:
+\[
+f(aA)=f(\begin{pmatrix}ar  & as\\ at  & au \end{pmatrix})\\
+= ar + au = a(r + u) = af(A)
+\]
+Behauptung 5. ist also richtig.
+\end{enumerate}
+
+ \section*{Aufgabe 1.5}
+ \begin{enumerate}
+ \item
+ Falls $A$ invertierbar ist, muss gelten:
+ \[
+ A\cdot A^{-1} = I_3 
+ \]
+ Wobei für $I_3$ gilt:
+ 
+ $I_3=(c_{ij})\in M_mm(\mathbb{K})$ mit $c_{ii}=1$ für alle $1 \le i \le m$ und $c_{ij}=0$ für alle $i\ne j$\\
+ Ist nun die k-te Zeile von $A$ eine Nullzeile und sei $A=(a_{ij}), A^{-1}=(b_{ij})$ und $C=(c_{ij})$, dann gilt für das Matrizenprodukt $A A^{-1} = C$:
+ \[
+ c_{kk} = \sum_{j = 1}^m a_{kj}b_{jk} = \sum_{j=1}^m 0 \cdot b_{jk} = 0
+ \]
+ Wenn $c_{kk}=0$ ist, kann $C$ nicht die Einheitsmatrix sein. Es folgt, dass $A$ nicht invertierbar ist.\\
+ Ist nun die k-te Spalte von $A$ eine Nullspalte, und sei wieder $A=(a_{ij}), A^{-1}=(b_{ij})$ und $C=(c_{ij})$, dann gilt für das Matrizenprodukt $A^{-1}A=C$:
+ \[
+ c_{kk} = \sum_{j=1}^m b_{kj}a_{jk}=\sum_{j=1}^m b_{jk}\cdot 0 = 0
+ \]
+ Auch hier ist also $c_{kk}=0$ und $C$ kann nicht  die Einheitsmatrix sein: Es folgt, dass $A$ nicht invertierbar ist, wenn $A$ eine Nullspalte hat.
+ \item
+ Sei $A = \begin{pmatrix} 1 & 1 \\ 1 & 1 \end{pmatrix}$ \\
+ Angenommen, $A$ sei invertierbar, dann gibt es eine Matrix $A^{-1}= \begin{pmatrix} a & b\\c & d \end{pmatrix} \in M_{22}(\mathbb{K})$, so dass gilt:
+ \[
+ AA^{-1}=\begin{pmatrix} 1 & 1 \\ 1 & 1 \end{pmatrix} \begin{pmatrix} a & b\\c & d \end{pmatrix} = 
+ \begin{pmatrix} a + c & b + d\\ a + c & b + d \end{pmatrix} = \begin{pmatrix} 1 & 0 \\ 0 & 1 \end{pmatrix}
+ \]
+ Da nicht gleichzeitig $a+c=1$ und $a+c = 0$ gelten kann, folgt, dass es keine Matrix $A^{-1}$ mit $AA^{-1}=I_2$ gibt.
+ 
+ \end{enumerate}
+ \section*{Aufgabe 1.6}
+ \begin{enumerate}
+ \item
+ Es gilt $\sum_{i=1}^n i(i+2)=\frac{n(n+1)(2n+7)}{6}$ für alle $n\in \mathbb{N}$.\\
+ Induktionsanfang: Sei $n_0=1$. Dann gilt $ 1(1+2) = 3 = \frac{1(1+1)(2\cdot 1 + 7)}{6}$\\\\
+ Induktionsannahme: Für ein $n\in \mathbb{N}$ gilt $\sum_{i=1}^n i(i+2)=\frac{n(n+1)(2n+7)}{6}$\\\\
+ Induktionsschritt: Zu zeigen ist
+ \[
+ 	\sum_{i=1}^n i(i+2)=\frac{n(n+1)(2n+7)}{6}\Rightarrow\sum_{i=1}^{n+1} i(i+2)=\frac{(n+1)(n+2)(2(n+1)+7)}{6} =\frac{(n+1)(2n^2+13n+18)}{6}
+ \]
+ Es gilt
+ \begin{eqnarray*}
+ 	\sum_{i=1}^{n+1} i(i+2)&=&\sum_{i=1}^{n} i(i+2) + (n+1)(n+3)\\
+ 	&=&\frac{(n)(n+1)(2n+7)}{6} + \frac{6(n+1)(n+3)}{6}\\
+ 	&=&\frac{(n+1)((n(2n + 7)+6(n+3))}{6}\\
+ 	&=&\frac{(n+1)(2n^2 + 7n + 6n + 18)}{6}\\
+ 	&=&\frac{(n+1)(2n^2 + 13n +18)}{6}\\
+ \end{eqnarray*}
+ Mit dem Prinzip der vollständigen Induktion folgt, dass$\sum_{i=1}^n i(i+2)=\frac{n(n+1)(2n+7)}{6}$  für alle $n\in\mathbb{N}$ gilt.
+\item
+Es gilt $\sum_{i=1}^{n}a^{i-1}=\frac{a^n-1}{a-1}$ für alle $n\in \mathbb{N}$ und alle $a\in\mathbb{R} \setminus \{0,1\}$.\\
+ Induktionsanfang: Sei $n_0=1$. Dann gilt $a^0 = 1 = \frac{a^1 -1}{a-1}$\\\\
+ Induktionsannahme: Für ein $n\in\mathbb{N}$ gilt $\sum_{i=1}^{n}a^{i-1}=\frac{a^n-1}{a-1}$\\\\
+ Induktionsschritt: Zu zeigen ist
+ \[
+ 	\sum_{i=1}^{n}a^{i-1}=\frac{a^n-1}{a-1}\Rightarrow\sum_{i=1}^{n+1}a^{i-1}=\frac{a^n}{a-1}
+ \]
+ Es gilt
+
+ \begin{eqnarray*}
+ 	\sum_{i=1}^{n+1}a^{i-1}&=&\sum_{i=1}^{n}a^{i-1}+a^n\\
+ 	&=&\frac{a^n -1}{a-1}+a^n\\
+ 	&=&\frac{a^n -1 + a^n(a-1)}{a-1}\\
+ 	&=&\frac{a^n -1 + a^{n+1}-a^n}{a-1}\\
+ 	&=&\frac{a^{n+1}-1}{a-1}
+ \end{eqnarray*}
+ Mit dem Prinzip der vollständigen Induktion folgt, dass $\sum_{i=1}^{n}a^{i-1}=\frac{a^n-1}{a-1}$ für alle $n\in \mathbb{N}$ und alle $a\in\mathbb{R} \setminus \{0,1\}$ gilt.
+ \end{enumerate}
+
+%Dies letzte Zeile muss unbedingt erhalten bleiben%
+%Hiernach also nicht mehr ändern%
+\end{document}
